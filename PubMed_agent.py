@@ -92,7 +92,7 @@ def search_pubmed(query):
 
     return id_list
 
-
+"""
 def fetch_pubmed_details(pmid):
     url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
 
@@ -104,9 +104,32 @@ def fetch_pubmed_details(pmid):
 
     response = requests.get(url, params=params)
     return response.text
+"""
 
+def fetch_efetch_batch(pmids):
+    ids = ",".join(pmids)
+
+    url = "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi"
+
+    params = {
+        "db": "pubmed",
+        "id": ids,
+        "retmode": "xml"
+    }
+
+    response = requests.get(url, params=params)
+
+    if response.status_code != 200:
+        print("EFETCH error:", response.text)
+        return None
+
+    return response.text
 
 def extract_abstracts(xml_text):
+    if not xml_text or "<PubmedArticleSet" not in xml_text:
+        print("Invalid XML received")
+        return []
+
     root = ET.fromstring(xml_text)
 
     results = []
@@ -120,7 +143,7 @@ def extract_abstracts(xml_text):
         abstract = " ".join(
             (a.text or "").strip()
             for a in abstract_nodes
-            if a.text
+            if a is not None
         ).strip()
 
         results.append({
@@ -305,30 +328,25 @@ if not pmids:
 print("\nTalált PMIDs:", pmids)
 
 
-for pmid in pmids:
-    xml_data = fetch_pubmed_details(pmid)
-    print(xml_data[:1000])
-    abstract = extract_abstracts(xml_data)
-    article = extract_pubmed_article(xml_data)
-    #summary = summarize_text(abstract)
+xml_data = fetch_efetch_batch(pmids)
+articles = extract_abstracts(xml_data)
 
-    #print(article)
+structured_articles = []
+raw_text_output = []
 
+for article in articles:
+    if not article.get("abstract"):
+        continue
+    
     structured_articles.append(article)
-    #ai_summary.append(        
-        #f"PMID: {article['pmid']}\n"
-        #f"TITLE: {article['title']}\n"
-        #f"SUMMARY: {summary}\n"
-        #f"{'-'*50}\n"
-    #)
 
-    # RAW TEXT FILE CONTENT
     raw_text_output.append(
         f"PMID: {article['pmid']}\n"
         f"TITLE: {article['title']}\n"
         f"ABSTRACT: {article['abstract']}\n"
         f"{'-'*50}\n"
     )
+
     """
     if not abstract:
         print("\nPMID:", pmid)
