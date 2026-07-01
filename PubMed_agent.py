@@ -106,18 +106,30 @@ def fetch_pubmed_details(pmid):
     return response.text
 
 
-def extract_abstract(xml_text):
+def extract_abstracts(xml_text):
     root = ET.fromstring(xml_text)
 
-    abstracts = root.findall(".//AbstractText")
+    results = []
 
-    if not abstracts:
-        return None
+    for article in root.findall(".//PubmedArticle"):
+        pmid = article.findtext(".//PMID")
+        title = article.findtext(".//ArticleTitle")
 
-    # több bekezdés esetén összefűzzük
-    full_abstract = " ".join([a.text for a in abstracts if a.text])
+        abstract_nodes = article.findall(".//AbstractText")
 
-    return full_abstract
+        abstract = " ".join(
+            (a.text or "").strip()
+            for a in abstract_nodes
+            if a.text
+        ).strip()
+
+        results.append({
+            "pmid": pmid,
+            "title": title,
+            "abstract": abstract if abstract else None
+        })
+
+    return results
 
 def safe_text(node):
     return node.text.strip() if node is not None and node.text else None
@@ -278,6 +290,7 @@ parser.add_argument("--query", required=True)
 args = parser.parse_args()
 
 query = args.query
+#query = "CA1 pyramidal neurons dendritic spines"
 
 pmids = search_pubmed(query)
 
@@ -294,6 +307,7 @@ print("\nTalált PMIDs:", pmids)
 
 for pmid in pmids:
     xml_data = fetch_pubmed_details(pmid)
+    print(xml_data[:1000])
     abstract = extract_abstract(xml_data)
     article = extract_pubmed_article(xml_data)
     #summary = summarize_text(abstract)
