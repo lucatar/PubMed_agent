@@ -1,0 +1,24 @@
+PMID: 42362375
+TITLE: Increased Ih Current Is Associated with Reduced Hippocampal CA1 Excitability in a Mouse Model of Multiple Sclerosis.
+SUMMARY: This study explores alterations in neuronal excitability and synaptic properties in the hippocampal CA1 region of a mouse model of multiple sclerosis (EAE). It found that symptomatic EAE mice exhibited reduced intrinsic excitability, evidenced by a 24% decrease in input resistance (Rin) and a lower firing frequency, though action potential threshold and synaptic transmission remained unchanged. Notably, hyperpolarization-activated (Ih) currents were enhanced in symptomatic EAE mice, which correlated with the reduction in Rin. Increased expression of the HCN1 channel subunit, responsible for Ih currents, was also observed in the EAE hippocampus. These findings suggest that enhanced Ih currents may limit hippocampal neuronal excitability, potentially contributing to cognitive and emotional impairments in multiple sclerosis, and indicate that Ih modulation could be a therapeutic target.
+--------------------------------------------------
+
+PMID: 42360548
+TITLE: Curculigoside Alleviates CSDS-induced Depressive-like Behavior by Modulating Pyramidal Neuron Excitability and Synaptic Transmission.
+SUMMARY: This study investigates the antidepressant effects of curculigoside (CUR), a flavonoid from traditional Chinese medicine, using a chronic social defeat stress (CSDS) model. Administering CUR (20 mg/kg) for seven days alleviated depressive-like behaviors in mice and restored the excitability of pyramidal neurons in the medial prefrontal cortex (mPFC) and ventral CA1 (vCA1) regions, which were impaired by CSDS. Network pharmacology and molecular docking identified CUR’s action on the cAMP-PKA signaling pathway as a key mechanism. CUR also improved synaptic transmission in the mPFC and vCA1, contributing to its antidepressant effects. These findings provide insights into CUR's mechanisms and support its potential as a therapeutic agent for depression.
+--------------------------------------------------
+
+PMID: 42358374
+TITLE: Comparative neuroprotective and exercise capacity effects of prophylactic intermittent fasting and probiotics in sleep-deprived rats: insights into anti-inflammatory marker modulation and
+SUMMARY: This study investigated the effects of prophylactic probiotics and intermittent fasting (IF) on neuropsychological functions and exercise capacity in rats experiencing sleep deprivation (SD). Forty albino Wistar rats were assigned to four groups: a control group (NSD) on a standard diet, a SD group subjected to SD for 72 hours weekly, a probiotics group (SDP) receiving probiotic supplements before and during SD, and an IF group (SDIF) undergoing intermittent fasting before and during SD. The researchers assessed neuropsychological functions and muscle endurance, followed by brain analysis for inflammatory markers and other indicators. Results indicated that probiotics can mitigate cognitive and endurance impairments caused by SD.
+--------------------------------------------------
+
+PMID: 42323322
+TITLE: Impact of NRSN2 deficiency on memory: Altered excitatory synaptic plasticity associated with reduced expression of NMDA receptor subunits and impaired LTP in the hippocampus.
+SUMMARY: The study focuses on NRSN2 (Neurensin-2), a protein linked to 20p13 microdeletion syndrome, to understand its role in neurodevelopment and cognitive function. Researchers used homozygous Nrsn2 knockout mice to investigate the effects of NRSN2 deficiency on the nervous system, which had not been thoroughly studied before.
+--------------------------------------------------
+
+PMID: 42297920
+TITLE: Dose- and state-dependent enhancement of hippocampal CA1 pyramidal neuron excitability by GM1 ganglioside in male rats with cholinergic lesions.
+SUMMARY: Cholinergic degeneration plays a role in hippocampal dysfunction in Alzheimer's disease. This study investigates the acute effects of ganglioside GM1 on hippocampal CA1 pyramidal neurons under conditions of cholinergic deficiency induced by lesions in the nucleus basalis magnocellularis (NBM). Using in vivo recordings from male rats, the researchers administered varying doses of GM1 and observed dose-dependent increases in neuronal firing rates. Statistical analysis confirmed significant changes over time, suggesting that GM1 may enhance neuronal activity in cholinergically compromised conditions.
+--------------------------------------------------

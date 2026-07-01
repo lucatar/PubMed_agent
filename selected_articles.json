@@ -1,0 +1,24 @@
+{
+  "selected_pmids": [
+    {
+      "pmid": "40335791",
+      "reason": "Directly addresses dendritic spine morphogenesis and synaptic plasticity in hippocampal CA1 pyramidal neurons, linking spine changes to memory formation."
+    },
+    {
+      "pmid": "41546430",
+      "reason": "Investigates the role of autophagy in regulating dendritic spine volume, density, and morphology specifically in proximal and distal dendrites of CA1 pyramidal neurons."
+    },
+    {
+      "pmid": "40816602",
+      "reason": "Shows how Tweety-homolog 1 protein influences dendritic spine morphology and density in CA1 and CA3 pyramidal neurons, implying a role in structural neuronal plasticity."
+    },
+    {
+      "pmid": "40398723",
+      "reason": "Demonstrates preservation of dendritic spine density in CA1 pyramidal neurons under pathological conditions, highlighting molecular mechanisms relevant to spine maintenance."
+    },
+    {
+      "pmid": "37728699",
+      "reason": "Examines dendritic morphology changes in CA1 pyramidal neurons after brain ischemia and the beneficial effects of treatment, relevant for spine plasticity in CA1 cells."
+    }
+  ]
+}
