@@ -308,10 +308,9 @@ print("\nTalált PMIDs:", pmids)
 for pmid in pmids:
     xml_data = fetch_pubmed_details(pmid)
     print(xml_data[:1000])
-    abstract = extract_abstract(xml_data)
+    abstract = extract_abstracts(xml_data)
     article = extract_pubmed_article(xml_data)
     #summary = summarize_text(abstract)
-
 
     #print(article)
 
