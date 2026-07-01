@@ -27,4 +27,4 @@ jobs:
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
-        python PubMed_agent.py
+        python PubMed_agent.py --query "CA1 pyramidal neurons dendritic spines"

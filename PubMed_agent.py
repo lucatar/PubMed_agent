@@ -4,6 +4,8 @@ import json
 import xml.etree.ElementTree as ET
 import os
 from dotenv import load_dotenv
+import argparse
+
 load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
@@ -271,7 +273,11 @@ Abstract:
 
 # ---------------- MAIN ---------------- #
 
-query = input("PubMed keresés: ")
+parser = argparse.ArgumentParser()
+parser.add_argument("--query", required=True)
+args = parser.parse_args()
+
+query = args.query
 
 pmids = search_pubmed(query)
 
